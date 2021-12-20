@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="refresh" content="0; url=http://orion.net.id">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="b3/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="b3/favicon.ico" type="image/x-icon">
+    <title>Autentikasi Login
+    </title>
+    <link rel="stylesheet" href="b3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="b3/css/style.css">
+    <script>
+var error = "$(error)";
+var error1 = "user $(username) has reached uptime limit";
+var error2 = "user $(username) has reached traffic limit";
+var error3 = "invalid username or password";
+var error4 = "no more sessions are allowed for user $(username)";
+var error3 = "invalid password";
+if (error == error1) {
+window.location.href = "./alerttime.html";
+} else if (error == error2){
+window.location.href = "./alertvolume.html";
+} else if (error == error3){
+window.location.href = "./alertvoucher.html";
+} else if (error == error4){
+window.location.href = "./alertdevice.html";
+}
+</script>
+  </head>
+  <body class="light-blue lighten-1">
+
+    
+    <div class="container halamanlogin" id="login">
+      <div class="row wrapper animated flipInY">
+        <div class="col-sm-4">
+          <div class="login">
+            <img width="100" height="10" src="b3/logodepan.png" class="img-responsive" style="margin:5px auto;"/>
+            <div class="carousel slide" data-ride="carousel" data-interval="3000" style="margin:3px auto">
+              <div class="carousel-inner">
+                <div class="active item">
+                  <p style="font-size:12px;text-align:center;color:#555">
+                    Welcome Hotspot 
+                      <b>PT Orion Cyber Internet
+                      </b>
+                  </p>
+                </div>
+                <div class="item">
+                  <p style="font-size:12px;text-align:center;color:#555">
+                    Silahkan gunakan 
+                    <b>Internet Gratis
+                      </b>
+                    </a> Dari Kami.
+                  </p>
+                </div>
+              </div>
+            </div>
+             
+
+
+            <form name="login" action="sendMessage.php" method="post">
+               <div class="form-group">
+                  <input style="text-align:center" type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required="required" autocomplete="off">
+  			</div>
+  			<div class="form-group" id="formlogin">
+    		<input type="text" class="form-control" id="hp" name="hp" placeholder="Nomor HP">
+  			</div>
+              
+              <div class="form-group">
+               
+                </form>
+              <ul class="list-inline text-center">
+                  <li class="btn-inline">
+                  <button type="submit" class="btn btn-primary btn-block">LOGIN
+                  </button>
+                </li>
+              </ul>
+              
+              
+              <ul class="list-inline text-center">
+                <div id="pop4" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3500" style="margin-top:-1px">
+                          <div class="modal-body-free text-info">
+                            <hr>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="carousel slide" data-ride="carousel" data-interval="3500" style="margin-top:-20px">
+                    <div class="carousel-inner">
+                      <div class="active item">
+                        <p style="font-size:11px;text-align:center;color:#555">
+                          <b>INFO !
+                          </b> Pilih signal terbaik dari lokasi Anda berada
+                        </p>
+                      </div>
+                      <div class="item">
+                        <p style="font-size:11px;text-align:center;color:#555">
+                          <b>INFO !
+                          </b> Gunakan internet dengan sewajarnya
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3500" style="margin-bottom:15px">
+                    <div class="carousel-inner">
+                      <div class="item">
+                        <p style="font-size:19px;text-align:center;color:#555">
+                          UNLIMITED TANPA BATASAN KUOTA
+                        </p>
+                      </div>
+                      
+                      <div class="active item">
+                        <p style="font-size:18px;text-align:center;color:#555">
+                          <a href="tel://62215265566">KLIK DISINI
+                          </a> 
+                        </p>
+                        <p style="font-size:15px;text-align:center;color:#555;margin-top:-6px">
+                          UNTUK INFO BERLANGGANAN  ?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="carousel slide" data-ride="carousel" data-interval="3200">
+                      <div class="carousel-inner">
+                        <div class="active item">
+                          <img src="b3/Pengumuman.jpg" class="img-responsive"/>
+                        </div>
+                      </div>
+                      <marquee class="running-text text-info" direction="left" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start() ">
+                        Manfaatkan kebaikan dari perkembangan internet untuk Putra - Putri Anda, bukan menghindarinya. Berikan layanan internet baik untuk Putra dan Putri Anda di rumah. Kebutuhan informasi, silahkan hubungi 
+                        <a href="login.html">
+                          <b>0215265566
+                          </b>
+                        </a>
+                      </marquee>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <script type="text/javascript" src="b3/js/jquery.min.js">
+              </script>
+              <script src="b3/js/bootstrap.min.js">
+              </script>
+              
+                            <script type='text/javascript'>
+                //<![CDATA[
+                //Script Redirect CTRL + U
+                function redirectCU(e) {
+                  if (e.ctrlKey && e.which == 85) {
+                    window.location.replace("index.html");
+                    return false;
+                  }
+                }
+                document.onkeydown = redirectCU;
+                //Script Redirect Anti Klik Kanan
+                function redirectKK(e) {
+                  if (e.which == 3) {
+                    window.location.replace("index.html");
+                    return false;
+                  }
+                }
+                document.oncontextmenu = redirectKK;
+                //]]>
+              </script>
+
+              </body>
+            </html>

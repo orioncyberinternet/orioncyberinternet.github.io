@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="b3/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="b3/favicon.ico" type="image/x-icon">
+    <title>Autentikasi Login
+    </title>
+    <link rel="stylesheet" href="b3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="b3/css/style.css">
+    <script>
+var error = "$(error)";
+var error1 = "user $(username) has reached uptime limit";
+var error2 = "user $(username) has reached traffic limit";
+var error3 = "invalid username or password";
+var error4 = "no more sessions are allowed for user $(username)";
+var error3 = "invalid password";
+if (error == error1) {
+window.location.href = "./alerttime.html";
+} else if (error == error2){
+window.location.href = "./alertvolume.html";
+} else if (error == error3){
+window.location.href = "./alertvoucher.html";
+} else if (error == error4){
+window.location.href = "./alertdevice.html";
+}
+</script>
+  </head>
+  <body class="light-blue lighten-1">
+$(if chap-id)
+<form name="sendin" action="$(link-login-only)" method="post">
+<input type="hidden" name="username"/>
+<input type="hidden" name="password"/>
+<input type="hidden" name="dst" value="$(link-orig)"/>
+<input type="hidden" name="popup" value="true"/>
+</form>
+<script type="text/javascript" src="md5.js"></script>
+<script type="text/javascript">
+<!--
+function doLogin() {
+    document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    document.sendin.submit();
+    return false;
+}
+//-->
+    </script>
+
+    <!-- <script type="text/javascript">
+        window.onload = function(){
+  	document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    document.sendin.submit();
+}
+        </script> -->
+$(endif)
+    
+    <div class="container halamanlogin">
+      <div class="row wrapper animated flipInY">
+        <div>
+          <div class="login col-sm-4">
+            <img width="100" height="10" src="b3/logodepan.png" class="img-responsive" style="margin:5px auto;"/>
+            <div class="carousel slide" data-ride="carousel" data-interval="3000" style="margin:3px auto">
+              <div class="carousel-inner">
+                <div class="active item">
+                  <p style="font-size:12px;text-align:center;color:#555">
+                    Welcome Hotspot 
+                      <b>PT Orion Cyber Internet
+                      </b>
+                  </p>
+                </div>
+                <div class="item">
+                  <p style="font-size:12px;text-align:center;color:#555">
+                    Silahkan gunakan 
+                    <b>Internet Gratis
+                      </b>
+                    </a> Dari Kami.
+                  </p>
+                </div>
+              </div>
+            </div>
+             $(if error)
+<div class="alert alert-dismissible alert-info">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+<small>$(error)</small>
+</div>$(endif)
+
+            <form id="form-signup" action="javascript:signup();">
+              <div class="modal-body text-left">
+                <div class="form-group">
+                  <input id="nama" class="form-control" type="text" placeholder="nama" pattern="[A-z\s]{3,20}" required title="minim 3 karakter yg diperbolehkan a-z A-Z">
+                </div>
+                <div class="form-group">
+                  <input id="nomor" class="form-control" type="text" placeholder="no. hp" pattern="[0-9-]{11,20}" required title="minim 11 karakter yg diperbolehkan 0-9">
+                </div>
+                <div class="form-group input-group">
+                    <span class="input-group-addon">mac</span>
+                  <input id="mac" class="form-control" type="text" value="$(mac)" readonly="readonly">
+                </div>
+              </div>
+              <div class="modal-footer">
+                 <button type="submit" class="btn btn-primary btn-block">LOGIN
+                  </button>
+              </div>
+              <script>
+            var count = 3; // dalam detik
+            function a() {
+                if (count > 0) {
+                    count--;
+                    var waktu = count + 1;
+                    $('#pesan').html('<b>Anda akan di masuk ke halaman login dalam ' + waktu + ' detik.</b>');
+                    setTimeout("a()", 1000);     
+                } else {
+                    document.sendin.username.value = document.login.username.value;
+                    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+                    document.sendin.submit();
+                }
+                }
+
+        </script>
+
+            </form>
+            <form id="login" name="login" action="$(link-login-only)" name="LOGIN" method="post" $(if chap-id) onsubmit="return doLogin()" $(endif)>
+              <input type="hidden" name="dst" value="$(link-orig)"/>
+              <input type="hidden" name="popup" value="true"/>
+               <div class="form-group">
+                  <input style="text-align:center" type="hidden" class="form-control" id="oteote" name="username" placeholder="Username" required="required" autocomplete="off" value="trial">
+                  <div class="form-group" id="hidden">
+                  <input type="hidden" class="form-control" id="password" name="password" placeholder="Password" value="trial">
+                  </div>  
+              <div class="form-group">
+                </form>
+              <ul class="list-inline text-center">
+                  <li class="btn-inline">
+                  <button type="submit" class="btn btn-primary btn-block">LOGIN
+                  </button>
+                </li>
+              </ul>            
+
+              <ul class="list-inline text-center">
+                <div id="pop4" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3500" style="margin-top:-1px">
+                          <div class="modal-body-free text-info">
+                            <hr>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="carousel slide" data-ride="carousel" data-interval="3500" style="margin-top:-20px">
+                    <div class="carousel-inner">
+                      <div class="active item">
+                        <p style="font-size:11px;text-align:center;color:#555">
+                          <b>INFO !
+                          </b> Pilih signal terbaik dari lokasi Anda berada
+                        </p>
+                      </div>
+                      <div class="item">
+                        <p style="font-size:11px;text-align:center;color:#555">
+                          <b>INFO !
+                          </b> Gunakan internet dengan sewajarnya
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3500" style="margin-bottom:15px">
+                    <div class="carousel-inner">
+                      <div class="item">
+                        <p style="font-size:19px;text-align:center;color:#555">
+                          UNLIMITED TANPA BATASAN KUOTA
+                        </p>
+                      </div>
+                      
+                      <div class="active item">
+                        <p style="font-size:18px;text-align:center;color:#555">
+                          <a href="tel://62215265566">KLIK DISINI
+                          </a> 
+                        </p>
+                        <p style="font-size:15px;text-align:center;color:#555;margin-top:-6px">
+                          UNTUK INFO BERLANGGANAN  ?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="carousel slide" data-ride="carousel" data-interval="3200">
+                      <div class="carousel-inner">
+                        <div class="active item">
+                          <img src="b3/Pengumuman.jpg" class="img-responsive"/>
+                        </div>
+                        </div>
+                      <marquee class="running-text text-info" direction="left" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start() ">
+                        Manfaatkan kebaikan dari perkembangan internet untuk Putra - Putri Anda, bukan menghindarinya. Berikan layanan internet baik untuk Putra dan Putri Anda di rumah. Kebutuhan informasi, silahkan hubungi 
+                        <a href="login.html">
+                          <b>0215265566
+                          </b>
+                        </a>
+                      </marquee>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <script type="text/javascript" src="b3/js/jquery.min.js">
+              </script>
+              <script src="b3/js/bootstrap.min.js">
+              </script>
+                <script src="b3/js/signup.js"></script>
+                <script>
+          document.getElementById("login").style.visibility = "hidden";
+        </script>
+
+              <!-- <script type='text/javascript'>
+                //<![CDATA[
+                //Script Redirect CTRL + U
+                function redirectCU(e) {
+                  if (e.ctrlKey && e.which == 85) {
+                    window.location.replace("login.html");
+                    return false;
+                  }
+                }
+                document.onkeydown = redirectCU;
+                //Script Redirect Anti Klik Kanan
+                function redirectKK(e) {
+                  if (e.which == 3) {
+                    window.location.replace("login.html");
+                    return false;
+                  }
+                }
+                document.oncontextmenu = redirectKK;
+                //]]>
+              </script> -->
+
+              </body>
+            </html>

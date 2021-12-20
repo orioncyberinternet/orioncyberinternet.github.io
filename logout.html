@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta http-equiv="refresh" content="15; url=http://demo.wifi-indonesia.com/about.html"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="b3/favicon.ico" type="image/x-icon">
+    <title>Logout
+    </title>
+    <link rel="stylesheet" href="b3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="b3/css/style.css">
+  </head>
+  <body>
+    <script language="JavaScript">
+      <!--
+        function openLogin() {
+        if (window.name != 'hotspot_logout') return true;
+        open('$(link-login)', '_blank', '');
+        window.close();
+        return false;
+      }
+      //-->
+    </script>
+    <script language="JavaScript">
+      function readablizeBytes(bytes) {
+        var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+        var e = Math.floor(Math.log(bytes)/Math.log(1024));
+        return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
+      }
+    </script>
+    <div class="container halamanlogin">
+      <div class="row wrapper">
+        <div class="col-sm-4">
+          <div class="login">
+            <h3>$(username)
+            </h3>
+            <h4>EXPIRED : $(session-time-left) Lagi
+            </h4>
+            <table class="table table-bordered table-condensed">
+              <tr>
+                <td>IP
+                </td>
+                <td>$(ip)
+                </td>
+              </tr>
+              <tr>
+                <td>Mac
+                </td>
+                <td>$(mac)
+                </td>
+              </tr>
+              <tr>
+                <td>Traffic
+                </td>
+                <td>
+                  <b>UL
+                  </b> $(bytes-in-nice)
+                  <b>DL
+                  </b> $(bytes-out-nice)
+                </td>
+              </tr>
+              
+            </table>
+            <p style="color:#767676;font-size:11px; text-align:center;margin-top:1px">Sentuh login untuk kembali ke halaman utama
+            </p>
+            <form action="login.html" name="login" onsubmit="return openLogin()">
+              <div class="row">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-primary btn-block2">LOGIN
+                  </button>
+                </div>
+              </div>
+            </form>
+            </form>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="row">
+          <img src="b3/about-banner1.png" class="img img-responsive"/>
+        </div>
+      </div>
+    </div>
+    </div>
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation
+          </span>
+          <span class="icon-bar top-bar">
+          </span>
+          <span class="icon-bar middle-bar">
+          </span>
+          <span class="icon-bar bottom-bar">
+          </span>
+        </button>
+        <a class="navbar-brand" data-toggle="modal" data-target="#pop3">
+          <img width="60" src="b3/logobawah.png" class="img-responsive">
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="status.html">STATUS
+            </a>
+          <li>
+          <li>
+            <a href="login.html">LOGIN
+            </a>
+          <li>
+          <li>
+            <a href="voucher.html">VOUCHER
+            </a>
+          </li>
+          <li>
+            <a href="internet.html">INTERNET
+            </a>
+          </li>
+          <li>
+            <a href="iklan.html">IKLAN
+            </a>
+          </li>
+          <li>
+            <a href="faq.html">FAQ
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <script type="text/javascript" src="b3/js/jquery.min.js">
+  </script>
+  <script src="b3/js/bootstrap.min.js">
+  </script>
+  <script type='text/javascript'>
+    //<![CDATA[
+    //Script Redirect CTRL + U
+    function redirectCU(e) {
+      if (e.ctrlKey && e.which == 85) {
+        window.location.replace("login2.html");
+        return false;
+      }
+    }
+    document.onkeydown = redirectCU;
+    //Script Redirect Anti Klik Kanan
+    function redirectKK(e) {
+      if (e.which == 3) {
+        window.location.replace("login2.html");
+        return false;
+      }
+    }
+    document.oncontextmenu = redirectKK;
+    //]]>
+  </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <!--  <meta http-equiv="refresh" content="15; url=http://demo.wifi-indonesia.com/alertvoucher.html"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="b3/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="b3/favicon.ico" type="image/x-icon">
+    <title>QR Scan
+    </title>
+    <link rel="stylesheet" href="b3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="b3/css/style.css">
+  </head>
+  <body class="light-blue lighten-1">
+    <div class="container halamaniklan">
+      <div class="row wrapper animated flipInY">
+        <ul class="list-inline text-center">
+          <img src="b3/about-banner1.png" style="width:99%;margin:5px auto" class="img-responsive">
+          <img src="b3/QR.png" class="img-responsive"/>
+          <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3500" style="margin-top:-1px">
+            <div class="carousel-inner">
+              <div class="active item">
+                <p style="font-size:12px;text-align:center;color:#555;margin-top:1px">
+                  Fitur kamera scan dapat bekerja
+                  <br>pada browser firefox
+                </p>
+              </div>
+              <div class="item">
+                <p style="font-size:12px;text-align:center;color:#555;margin-top:1px">
+                  Tutup halaman ini, buka app browser
+                  <br>
+                  kemudian ketik 
+                  <b>catalyst.info
+                  </b>
+                </p>
+              </div>
+            </div>
+            <div class="modal-body-free text-info">
+              <hr>
+              <ul class="list-inline text-center">
+                <li class="btn-inline">
+                  <div style="text-align:center; font-size:12px">
+                    Pindai 
+                    <b>Kode QR
+                    </b> untuk login autentikasi voucher
+                  </div>
+                </li>
+                <li class="btn-inline">
+                  <div type="button" class="btn btn-primary3 btn-block3" onclick="window.location='https://hotspotms.github.io/qrlogin/?hotspot= Scanner - Arahkan kamera kemudian pindai kode QR pada kartu voucher';">QR SCAN
+                    </button>
+                </div>
+              </li>
+            </ul>
+          <hr>
+        </ul>
+      </div>
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+              <span class="sr-only">Toggle navigation
+              </span>
+              <span class="icon-bar top-bar">
+              </span>
+              <span class="icon-bar middle-bar">
+              </span>
+              <span class="icon-bar bottom-bar">
+              </span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img width="60" src="b3/logobawah.png" class="img-responsive">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="status.html">STATUS
+                </a>
+              <li>
+              <li>
+                <a href="login.html">LOGIN
+                </a>
+              <li>
+              <li>
+                <a href="voucher.html">VOUCHER
+                </a>
+              </li>
+              <li>
+                <a href="internet.html">INTERNET
+                </a>
+              </li>
+              <li>
+                <a href="internet.html">IKLAN
+                </a>
+              </li>										
+              <li>
+                <a href="faq.html">FAQ
+                </a>
+              </li>
+              <li class="active">
+                <a href="qr.html">
+                  <b>QR LOGIN
+                  </b>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <script type="text/javascript" src="b3/js/jquery.min.js">
+      </script>
+      <script src="b3/js/bootstrap.min.js">
+      </script>
+      <script type='text/javascript'>
+        //<![CDATA[
+        //Script Redirect CTRL + U
+        function redirectCU(e) {
+          if (e.ctrlKey && e.which == 85) {
+            window.location.replace("login2.html");
+            return false;
+          }
+        }
+        document.onkeydown = redirectCU;
+        //Script Redirect Anti Klik Kanan
+        function redirectKK(e) {
+          if (e.which == 3) {
+            window.location.replace("login2.html");
+            return false;
+          }
+        }
+        document.oncontextmenu = redirectKK;
+        //]]>
+      </script>
+      </body>
+    </html>
